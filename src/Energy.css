@@ -1,0 +1,399 @@
+.arrow-line-11{
+    position: absolute;
+    left: 40px;
+    height: 120px;
+    top: -10px;
+ }
+ .arrow-line-12{
+     position: absolute;
+     left: 40px;
+     height: 120px;
+     top: 90px;
+  }
+  .arrow-line-13{
+     position: absolute;
+     left: 40px;
+     height: 120px;
+     top: 190px;
+  }
+  .arrow-line-14{
+     position: absolute;
+     left: 40px;
+     height: 120px;
+     top: 290px;
+  }
+ 
+ 
+ .flex{
+     display: flex;
+ }
+ .main{
+     position:absolute;
+     top: 40px;
+ }
+ .st-line-11{
+    rotate: 90deg; 
+    position: absolute;
+    left: -130px;
+    height: 40vh;
+    top: 10px;
+ }
+ .st-line-141{
+     rotate: 90deg; 
+     position: absolute;
+     left: -130px;
+     height: 40vh;
+     top: 88px;
+  }
+  .vi{
+    position:relative;
+    height: 80px;
+    border-radius: 80px;
+    border-bottom-left-radius:300px ;
+    border-bottom-right-radius: 300px;
+    background-color: rgb(45, 46, 47);
+    margin-right: 10px;
+  }
+ .card{
+     height: 60vh;
+     width: 55vw;
+     margin: 25px;
+     margin-left: 10vh!important;
+     /* background-color: rgb(220, 241, 255)!important; */
+     background-color: rgb(212, 236, 246)!important;
+     border-color: rgb(255, 255, 255)!important;
+     margin-top: 14vh!important;
+     /* padding: 30px; */
+ }
+ .aa{
+    margin-left: 50px!important;
+    margin-top: 60px;
+    padding: -20px;
+ }
+ .card2{
+     border-color: rgb(255, 255, 255)!important;
+     position: absolute;
+     top: 180px;
+     right: 80px;
+ }
+ .card3{
+     border-color: rgb(255, 255, 255)!important;
+     position: absolute;
+     top: 230px;
+     right: 40px;
+ }
+ .card-txt{
+   /* background-color: rgb(220, 241, 255)!important; */
+   background-color: rgb(212, 236, 246)!important;
+   height: 60vh;
+   width: 30vw;
+   padding-top: 30px;
+   padding-left: 55px;
+ }
+ .background{
+     /* background-color: rgba(249, 250, 252, 0.49) ; */
+     height: 100vh;
+     /* background-color: #f0f0f0de; */
+     background-color: rgb(221, 221, 221);
+     
+ }
+ .button{
+     /* background-color: rgb(49, 141, 217)!important; */
+
+     /* background-color: rgb(90, 226, 181)!important; */
+     color: rgb(0, 0, 0)!important;
+     position: absolute;
+     right: -200px;
+     bottom: -29px;
+     width: 6vw;
+     padding-top: 15px!important;
+     height: 40px;
+     /* border-color: black!important; */
+ }
+ 
+ .button2{
+     /* background-color: rgb(49, 141, 217)!important; */
+     /* background-color: rgb(90, 226, 181)!important; */
+     color: rgb(0, 0, 0)!important;
+     position: absolute;
+     right: 1000px;
+     bottom: -85px;
+      width: 7vw;
+      padding-top: 15px!important;
+      height: 40px;
+ }
+ .button3{
+     /* background-color: rgb(49, 141, 217)!important; */
+     /* background-color: rgb(90, 226, 181)!important; */
+     color: rgb(0, 0, 0)!important;
+     position: absolute;
+     bottom: 1015px;
+     right: 1000px;
+     width: 7vw;
+     padding-top: 15px!important;
+     height: 40px;
+ }
+ .button4{
+    /* background-color: rgb(90, 226, 181)!important; */
+     color: rgb(0, 0, 0)!important;
+     position: absolute;
+     bottom: 2115px;
+     right: -200px;
+     width: 7vw;
+     padding-top: 15px!important;
+     height: 40px;
+ }
+ .flex-Card2{
+    display: flex;
+    padding: 10px;
+ }
+ .inputs{
+     position: absolute;
+     left: 360px;
+     top: 5px;
+     
+ }
+ .inputs2{
+     position: absolute;
+     left: 360px;
+    top: 100px;
+ }
+ .inputs3{
+     position: absolute;
+     left: 360px;
+    top: 200px;
+ }
+ .inputs4{
+     position: absolute;
+     left: 360px;
+    top: 300px;
+ }
+ .disabled-cursor1{
+   
+     margin-right: 35px;
+     width: 7vw!important;
+     color: rgb(0, 0, 0)!important;
+ }
+ .i{
+    width: 10vw!important;
+    border-radius: 20px;
+ }
+ .disabled-cursor2{
+    margin-left: 20PX;
+     width: 7vw;
+ }
+ .txt-main{
+     color: white;
+     margin-left: 460px;
+     margin-bottom: 35px;
+    text-shadow: 30%!important;
+ }
+ .tt1{
+     position: absolute;
+     top: 3px;
+     right: 82px;
+     
+ }
+ .tt2{
+     position: absolute;
+     top: 3px;
+     right: 65px;
+     
+ }
+ .t123{
+    color: black;
+ }
+ .inp{
+    font-weight: bolder!important;
+    color: black;
+ }
+ .inp2{
+    font-weight: bolder!important;
+    color: black;
+ }
+
+ 
+ .Iot-txt{
+    margin-left: 155vh;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    color: white;
+  }
+ 
+ 
+  /* @media (min-width:300px) and ( max-width:430px) {
+     .background{
+        background-color: rgba(0, 0, 0, 0.900)!important;        
+         height: 100vh!important;
+         width: 150vw!important;
+         
+     }
+     .arrow-line-11{
+         position: absolute;
+         left: 5px;
+         height: 56px;
+         top: 14px;
+      }
+      .arrow-line-12{
+          position: absolute;
+          left: 5px;
+          height: 56px;
+          top: 90px;
+       }
+       .arrow-line-13{
+          position: absolute;
+          left: 5px;
+          height: 56px;
+          top: 165px;
+       }
+       .arrow-line-14{
+          position: absolute;
+          left: 5px;
+          height: 56px;
+          top: 245.5px;
+       }
+      
+      
+      .flex{
+          display: flex;
+      }
+      .main{
+          position:absolute;
+          top: 40px;
+      }
+      .st-line-11{
+         rotate: 90deg; 
+         position: absolute;
+         left: -125.5px;
+         height: 35vh;
+         top: 13px;
+      }
+      .st-line-141{
+          rotate: 90deg; 
+          position: absolute;
+          left: -125.5px;
+          height: 35vh;
+          top: 71px;
+       }
+      .card{
+         margin-left: 10px;
+          height: 55vh;
+          width: 102vw;
+          margin: 15px;
+          margin-top: 25px;
+          background-color: rgb(111, 111, 111)!important;
+          border-color: rgb(255, 255, 255)!important;
+      }
+      .card2{
+          border-color: rgb(255, 255, 255)!important;
+          position: absolute;
+          top: 700px;
+          right: 103.5px;
+      }
+      .card3{
+          border-color: rgb(255, 255, 255)!important;
+          position: absolute;
+          top: 600px;
+          right: -25px;
+      }
+      .card-txt{
+        background-color: rgb(111, 111, 111)!important;
+        height: 62vh!important;
+        width: 50vw!important;
+        padding: 20px;
+      }
+      .background{
+          background-color: rgb(182, 204, 252) ;
+          height: 100vh;
+          
+      }
+      .button{
+          background-color: rgb(49, 141, 217)!important;
+          color: rgb(255, 255, 255)!important;
+          position: absolute;
+          right: -60px;
+          bottom: -23px;
+          width: 16vw!important;
+          padding-top: 10px!important;
+          height: 38px;
+      }
+      
+      .button2{
+          background-color: rgb(49, 141, 217)!important;
+          color: rgb(255, 255, 255)!important;
+          position: absolute;
+          right: 1139px;
+          bottom: -53px;
+           width: 16vw;
+           padding-top: 10px!important;
+           height: 38px;
+      }
+      .button3{
+          background-color: rgb(49, 141, 217)!important;
+          color: rgb(255, 255, 255)!important;
+          position: absolute;
+          bottom: 2190px;
+          right: 1100px;
+          width: 13vw!important;
+          padding-top: 10px!important;
+          height: 30px;
+      }
+      .button4{
+          background-color: rgb(49, 141, 217)!important;
+          color: rgb(255, 255, 255)!important;
+          position: absolute;
+          bottom: 2110px;
+          right: 1100px;
+          width: 13vw;
+          padding-top: 10px!important;
+          height: 30px;
+      }
+      .inputs{
+          position: absolute;
+          left: 115px;
+          top: -5px;
+      }
+      .inputs2{
+          position: absolute;
+          left: 115px;
+         top: 65px;
+      }
+      .inputs3{
+          position: absolute;
+          left: 115px;
+          top: 144.5px;
+        
+      }
+      .inputs4{
+          position: absolute;
+          left: 115px;
+          top: 223px;
+          font-size: 10px;
+      }
+      .disabled-cursor1{
+         width: 5vw!important;
+      }
+      .disabled-cursor1{
+         margin-right: 0px;
+         width: 20vw!important;
+ 
+     }
+     .disabled-cursor2{
+        margin-left: 0PX;
+         width: 30vw!important;
+     }
+      .txt-main{
+          font-family: cursive!important;
+          margin: 15px;
+      }
+      .txt-in{
+         font-size: 5px!important;
+      }
+      .inp{
+        font-size: 8px;
+        margin-right: 25px;
+      }
+      .input{
+         font-size: x-small!important;
+      }
+ } */

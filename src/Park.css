@@ -1,0 +1,41 @@
+.bg-s{
+    height: 100vh;
+    background-color: rgba(227, 224, 224, 0.9);
+    padding: 30px!important;
+    
+}
+.b11{
+    margin-left: -35vh!important;
+    /* background-color: rgb(174, 210, 231); */
+}
+.b2{
+    position: absolute;
+    margin-top: 51vh!important;
+}
+
+.ner{
+    margin-top: 8vh!important;
+    height: 65vh;
+    width: 40vw;
+    margin-left: 15vh;
+    background-color: rgb(174, 210, 231)!important;
+}
+.xyz{
+    width: 80vw;
+    height: 80vh;
+    margin-left: 15vh;
+}
+.vb{
+    /* display: flex; */
+    padding-top: 50px;
+    height: 65vh;
+    width: 15vw;
+    padding-left: 40px;
+    background-color: rgb(174, 210, 231)!important;
+    margin-top: 8vh;
+    margin-left: 60px;
+}
+.bq{
+    margin-left: 140vh;
+    width: 15vh;   
+}
