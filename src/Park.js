@@ -242,7 +242,7 @@ export const Park = () => {
            </Card>
           </div>
          
-          <Link to="/pcc1">  <Button className='bq'>Link</Button>  </Link>
+          <Link to="/LiveGraphs">  <Button className='bq'>Link</Button>  </Link>
          </Card>
        </div>
     
