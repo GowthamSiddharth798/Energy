@@ -6,15 +6,16 @@
 }
 .b11{
     margin-left: -35vh!important;
+    margin-top: 50px;
     /* background-color: rgb(174, 210, 231); */
 }
 .b2{
     position: absolute;
-    margin-top: 51vh!important;
+    margin-top: 12vh!important;
 }
 
 .ner{
-    margin-top: 8vh!important;
+    margin-top: 7vh!important;
     height: 65vh;
     width: 40vw;
     margin-left: 15vh;
@@ -32,7 +33,7 @@
     width: 15vw;
     padding-left: 40px;
     background-color: rgb(174, 210, 231)!important;
-    margin-top: 8vh;
+    margin-top:8vh;
     margin-left: 60px;
 }
 .bq{

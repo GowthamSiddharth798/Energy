@@ -67,7 +67,7 @@
  }
  .aa{
     margin-left: 50px!important;
-    margin-top: 60px;
+    margin-top: 30px;
     padding: -20px;
  }
  .card2{
@@ -219,7 +219,9 @@
     margin-bottom: 40px;
     color: white;
   }
- 
+ .back234{
+    color: rgb(26, 927, 105);
+ }
  
   /* @media (min-width:300px) and ( max-width:430px) {
      .background{

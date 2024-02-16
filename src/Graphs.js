@@ -7,11 +7,15 @@ import { Card } from 'react-rainbow-components';
 const Graphs = () => {
   return (
     <>
+    <div className='we'>
     <div className='flex marg'>
-        <Card className='ery'><CustomBarChart/></Card>
-        <Card className='ery'> <CustomBarChart2/></Card>
+        <Card className='ery'>
+          <p><b className='hj'>Live Power</b></p>
+          <CustomBarChart/></Card>
+        <Card className='ery'><p><b className='hj'> Live Energy</b></p> <CustomBarChart2/></Card>
     </div>
-    <Card className='ery1'><CustomBarChart3/></Card>
+    {/* <Card className='ery1'> <p><b>Monthly Energy</b></p><CustomBarChart3/></Card> */}
+    </div>
     </>
   )
 }

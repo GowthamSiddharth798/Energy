@@ -79,7 +79,6 @@ export const Park = () => {
                     </Card>
       </div>
        <div className='bg-s'>
-       
          <Card className='xyz'>
          <div className='flex'>
           <Card className='ner'>
@@ -101,21 +100,7 @@ export const Park = () => {
                             <Input  className="disabled-cursor1 input " value={IBcurrent}/>
                         </div>
                     </div>
-                    <div className="flex inputs2 b11">
-                        <div >
-                            <b class="inp">IRL_Current(A):</b>
-                            <Input  className="disabled-cursor1  input" value={IRLcurrent} />                      
-                        </div>
-
-                        <div>
-                            <b class="inp">IYL_Current(A):</b>
-                            <Input  className="disabled-cursor1 input " value={IYLcurrent}/>
-                        </div>
-                        <div >
-                            <b class="inp">IBL_Current(A):</b>
-                            <Input  className="disabled-cursor1 input " value={IBLcurrent}/>
-                        </div>
-                    </div>
+                   
                     <div className="flex inputs3 b11">
                         <div >
                             <b class="inp"> R_Voltage(v):</b>
@@ -213,6 +198,7 @@ export const Park = () => {
                 </div>
            </div>
            </Card>
+
            <Card className='vb'>
                                 <div>
                                    <b className="inp2"> Power Factor:</b>
@@ -242,7 +228,7 @@ export const Park = () => {
            </Card>
           </div>
          
-          <Link to="/LiveGraphs">  <Button className='bq'>Link</Button>  </Link>
+          <Link to="/LiveGraphs">  <Button className='bq'>Live_Graphs</Button>  </Link>
          </Card>
        </div>
     

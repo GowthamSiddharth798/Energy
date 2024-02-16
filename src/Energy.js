@@ -1,14 +1,25 @@
 import React from "react";
 import './Energy.css';
-import { Input,Button,Card,ProgressCircular } from "react-rainbow-components";
+import { Input,Button,Card } from "react-rainbow-components";
 import { Link } from 'react-router-dom';
+import { Progress, Space} from 'antd';
 // import Nav2 from "./Nav2";
 // import Menu from "./Menu";
 import  { useState, useEffect } from 'react';
-import { Variant } from "react-bootstrap";
+// import { Variant } from "react-bootstrap";
 
+const formatProgress = (percent) => '${percent}';
+const getColorEffi = (percent) => {
+  if (percent >= 75) {
+    return 'green';
+  } else if (percent >= 50) {
+    return 'blue';
+  } else {
+    return 'red';
+  }
+};
  const Energy = () => {
-
+  
     const [current,setCurrent] =useState();
     const [power,setPower] =useState();
     const [Power_factor,setPower_factor] =useState();
@@ -16,6 +27,7 @@ import { Variant } from "react-bootstrap";
     const [Energy_Meter,setEnergy_Meter] =useState();
     const [Active_power,setActive_Power] =useState();
     const [Reactive_power,setReactive_Power] =useState();
+    const [Voltage,setVoltage] =useState();
 
     useEffect(() => {
         setInterval(() => {
@@ -30,6 +42,8 @@ import { Variant } from "react-bootstrap";
                     setReactive_Power(data.Reactive_power);
                     setPower_factor(data.Power_factor);
                     setEnergy(data.energy);
+                    setVoltage(data.Voltage);
+
                     console.log(data);
                 })
                 .catch(error => {
@@ -62,7 +76,7 @@ import { Variant } from "react-bootstrap";
 
   const getButtonStyle = () => {
     return {
-      backgroundColor:  current > 220 || power>100 || energy>5000 ? 'red' : 'rgb(0.26, 817, 185)', 
+      backgroundColor:  current > 220 || power>200 || energy>5000 ? 'red' : 'rgb(0,152,28)', 
       color: 'green',
       height:40,
       width:100,
@@ -85,11 +99,11 @@ import { Variant } from "react-bootstrap";
                     <div className ="margin-hamber"></div>
                         <img src="https://i.ibb.co/YZw8yxS/Iot-logo.jpg" class="main-logo" />
                         <h1 className="main-heading">GREEN FUSION IoT SOLUTIONS</h1> 
-                    <div className="title"> <h1>Energy Monitoring </h1></div>
+                    <div className="title"> <h1>ENERGY MONITORING</h1></div>
                     <div >
                         <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/>
                             </div>
-                            <h1  class="heading">VISHNU INSTITUTE OF Technology</h1>   
+                            <h1  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h1>   
                                                               
                     </div>
                     </Card>
@@ -224,11 +238,13 @@ import { Variant } from "react-bootstrap";
                        <div className="flex-Card2">
                               <div>
                               <div>
-                                  <ProgressCircular value={Power_factor} variant="success"  />
+                                <Space Wrap>                                  <Progress  type="circle" strokeColor={getColorEffi(power)} percent={power} />
+</Space>
+                                  {/* <ProgressCircular value={power} className="back234" /> */}
                               </div>
                                <div  >
-                                   <b className="inp2"> Power(W):</b>
-                                   <Input  className="disabled-cursor2 input "  value={power} />                      
+                                   <b className="inp2"> Voltage(v):</b>
+                                   <Input  className="disabled-cursor2 input "  value={Voltage} />                      
                                </div>
                                <div >
                                    <b >Energy <br/>Consumption(Kwh):</b>
