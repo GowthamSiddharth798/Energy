@@ -11,15 +11,24 @@ import { Variant } from "react-bootstrap";
 
     const [current,setCurrent] =useState();
     const [power,setPower] =useState();
+    const [Power_factor,setPower_factor] =useState();
     const [energy,setEnergy] =useState();
+    const [Energy_Meter,setEnergy_Meter] =useState();
+    const [Active_power,setActive_Power] =useState();
+    const [Reactive_power,setReactive_Power] =useState();
 
     useEffect(() => {
         setInterval(() => {
-            fetch("http://localhost:8000/api/sensordata")
+            fetch("https://energybackend.onrender.com/api/sensordata")
                 .then(async result => {
                     const data = await result.json();
                     setCurrent(data.current);
                     setPower(data.power);
+                    setPower_factor(data.Power_factor);
+                    setEnergy_Meter(data.Energy_Meter);
+                    setActive_Power(data.Active_power);
+                    setReactive_Power(data.Reactive_power);
+                    setPower_factor(data.Power_factor);
                     setEnergy(data.energy);
                     console.log(data);
                 })
@@ -53,7 +62,7 @@ import { Variant } from "react-bootstrap";
 
   const getButtonStyle = () => {
     return {
-      backgroundColor:  current > 90 || power>100 || energy>5000 ? 'red' : 'rgb(0.26, 817, 185)', 
+      backgroundColor:  current > 220 || power>100 || energy>5000 ? 'red' : 'rgb(0.26, 817, 185)', 
       color: 'green',
       height:40,
       width:100,
@@ -215,19 +224,19 @@ import { Variant } from "react-bootstrap";
                        <div className="flex-Card2">
                               <div>
                               <div>
-                                  <ProgressCircular value={75.3} variant="success"  />
+                                  <ProgressCircular value={Power_factor} variant="success"  />
                               </div>
                                <div  >
                                    <b className="inp2"> Power(W):</b>
-                                   <Input disabled className="disabled-cursor2 input "  />                      
+                                   <Input  className="disabled-cursor2 input "  value={power} />                      
                                </div>
                                <div >
                                    <b >Energy <br/>Consumption(Kwh):</b>
-                                   <Input disabled className="disabled-cursor2 input " />
+                                   <Input  className="disabled-cursor2 input " value={Energy_Meter}/>
                                </div>
                                <div>
                                    <b className="inp2"> Power Factor:</b>
-                                   <Input disabled className="disabled-cursor2 input " />
+                                   <Input  className="disabled-cursor2 input " value={Power_factor} />
                                </div>
                               </div>
                                
@@ -235,19 +244,19 @@ import { Variant } from "react-bootstrap";
 
                                         <div>
                                             <b className="inp2">Active Power:</b>
-                                            <Input disabled className="disabled-cursor2 input " />
+                                            <Input  className="disabled-cursor2 input " value={Active_power} />
                                         </div>
                                         <div >
                                             <b className="inp2"> Reactive Power(KVA):</b>
-                                            <Input disabled className="disabled-cursor2 input " />                      
+                                            <Input  className="disabled-cursor2 input " value={Reactive_power} />                      
                                         </div>
                                         <div >
                                             <b >Energy Meter<br/> Reading(Kwh):</b>
-                                            <Input disabled className="disabled-cursor2 input " />
+                                            <Input  className="disabled-cursor2 input " value={energy} />
                                         </div>
                                         <div >
                                             <b >Monthly Energy <br/> Consumption(Kwh):</b>
-                                            <Input disabled className="disabled-cursor2 input " />
+                                            <Input  className="disabled-cursor2 input " value={Energy_Meter} />
                                         </div>
                                </div>
                               

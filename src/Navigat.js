@@ -22,10 +22,10 @@ import Energy from './Energy.js';
       <Switch>
         {/* <Route path="/" exact component={Login}/> */}
         {/* <Route path="/Home" exact component={Body} /> */}
-        <Route path="/Pcc1" exact component={Pcc1} />
-        <Route path="/Pcc2" exact component={Pcc2} />
-        <Route path="/Pcc3" exact component={Pcc3} />
-        <Route path="/Pcc4" exact component={Pcc4} />
+        <Route path="/Pcc1" exact component={Park} />
+        <Route path="/Pcc2" exact component={Park} />
+        <Route path="/Pcc3" exact component={Park} />
+        <Route path="/Pcc4" exact component={Park} />
         <Route path="/Pcc1/Park Light D.B's"  exact component={Park}/>
         {/* <Route path="/Pcc1/Stp"  exact component={Park}/>
         <Route path="/Myaccounts" exact component={Myaccounts}/>
