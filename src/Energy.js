@@ -25,10 +25,10 @@ const getColorEffi = (percent) => {
     const [Power_factor,setPower_factor] =useState();
     const [energy,setEnergy] =useState();
     const [Energy_Meter,setEnergy_Meter] =useState();
-    const [Active_power,setActive_Power] =useState();
+    const [Active_power,setActive_power] =useState();
     const [Reactive_power,setReactive_Power] =useState();
     const [Voltage,setVoltage] =useState();
-
+    
     useEffect(() => {
         setInterval(() => {
             fetch("https://energybackend.onrender.com/api/sensordata")
@@ -38,7 +38,7 @@ const getColorEffi = (percent) => {
                     setPower(data.power);
                     setPower_factor(data.Power_factor);
                     setEnergy_Meter(data.Energy_Meter);
-                    setActive_Power(data.Active_power);
+                    setActive_power(data.Active_power);
                     setReactive_Power(data.Reactive_power);
                     setPower_factor(data.Power_factor);
                     setEnergy(data.energy);
@@ -76,7 +76,7 @@ const getColorEffi = (percent) => {
 
   const getButtonStyle = () => {
     return {
-      backgroundColor:  current > 220 || power>200 || energy>5000 ? 'red' : 'rgb(0,152,28)', 
+      backgroundColor:  current > 630 || power>270000 || energy>5000 ? 'red' : 'rgb(0,152,28)', 
       color: 'green',
       height:40,
       width:100,
@@ -131,7 +131,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs">
                            <div >
                                <b class="t2 inp" > Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current} onChange={ handleInputChange} />     
+                               <Input  className="disabled-cursor1 input " value={current/2} onChange={ handleInputChange} />     
                               
                            </div>
                            
@@ -159,7 +159,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs2">
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current} onChange={handleInputChange} />                      
+                               <Input  className="disabled-cursor1 input " value={current/2} onChange={handleInputChange} />                      
                            </div>
                            
                            <div>
@@ -185,7 +185,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs3" >
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current}/>                      
+                               <Input  className="disabled-cursor1 input " value={current/2}/>                      
                            </div>
                            
                            <div>
@@ -211,7 +211,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs4">
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input "  value={current}onChange={handleInputChange}/>                      
+                               <Input  className="disabled-cursor1 input "  value={current/2}onChange={handleInputChange}/>                      
                            </div>
                            
                            <div>
@@ -252,14 +252,14 @@ const getColorEffi = (percent) => {
                                </div>
                                <div>
                                    <b className="inp2"> Power Factor:</b>
-                                   <Input  className="disabled-cursor2 input " value={Power_factor} />
+                                   <Input  className="disabled-cursor2 input " value={Power_factor*-1} />
                                </div>
                               </div>
                                
                                <div className="aa">
 
                                         <div>
-                                            <b className="inp2">Active Power:</b>
+                                            <b className="inp2">Apparent Power:</b>
                                             <Input  className="disabled-cursor2 input " value={Active_power} />
                                         </div>
                                         <div >

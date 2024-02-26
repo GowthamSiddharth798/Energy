@@ -118,16 +118,16 @@ export const Park = () => {
                     </div>
                     <div className="flex inputs4 b11">
                         <div >
-                            <b class="inp">  VL_Voltage(v):</b>
+                            <b class="inp">  VRL_Voltage(v):</b>
                             <Input  className="disabled-cursor1  input" value={VRLvoltage} />                      
                         </div>
 
                         <div >
-                            <b class="inp">  VL_Voltage(v):</b>
+                            <b class="inp">  VYL_Voltage(v):</b>
                             <Input  className="disabled-cursor1 input " value={VYLvoltage} />
                         </div>
                         <div >
-                            <b class="inp"> VL_Voltage(v):</b>
+                            <b class="inp"> VBL_Voltage(v):</b>
                             <Input  className="disabled-cursor1 input " value={VBLvoltage}/>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ export const Park = () => {
                                </div>
                                <br/>
                                <div>
-                                            <b className="inp2">Active Power:</b>
+                                            <b className="inp2">Apparent Power:</b>
                                             <Input  className="disabled-cursor2 input "  value={Active_power}/>
                                         </div>
                                         <br/>
