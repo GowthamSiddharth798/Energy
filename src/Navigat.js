@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Pcc1 from './Pcc1.js';
-import Pcc2 from './Pcc2.js';
-import Pcc3 from './Pcc3.js';
-import Pcc4 from './Pcc4.js';
+// import Pcc1 from './Pcc1.js';
+// import Pcc2 from './Pcc2.js';
+// import Pcc3 from './Pcc3.js';
+// import Pcc4 from './Pcc4.js';
 import Graphs from './Graphs.js';
 import { Park } from './Park.js';
 import Energy from './Energy.js';

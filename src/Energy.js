@@ -95,23 +95,16 @@ const getColorEffi = (percent) => {
    
    <div className="background">
       <div>
-      <Card className="cc"><div className="in-line head-main">
-                    <div className ="margin-hamber"></div>
-                        <img src="https://i.ibb.co/YZw8yxS/Iot-logo.jpg" class="main-logo" />
-                        <h1 className="main-heading">GREEN FUSION IoT SOLUTIONS</h1> 
-                    <div className="title"> <h1>ENERGY MONITORING</h1></div>
-                    <div >
-                        <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/>
-                            </div>
-                            <h1  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h1>   
-                                                              
+      <Card className="hwe" >
+        <div className=" flex" >
+                      <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
+                     <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
+                     <div > <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/></div>                                     
                     </div>
+                    
                     </Card>
       </div>
-      {/* <center className="flex"><h3 className="txt-main glow-text">
-      <img src="https://i.ibb.co/qkdZwY2/vit2.png" className="vi img-a"/> 
-       VISHNU ENERGY MONITORING SYSTEM</h3
-       ></center> */}
+      
      <div class="flex">
                <div>
                    <Card className="card flex">
@@ -281,36 +274,7 @@ const getColorEffi = (percent) => {
                </Card> 
                </div>
 
-               {/* <div class="card3">
-               <Card className="card-txt" >
-                       <div >
-                       <h5 className="tt2 inp2">Vishnu Socitey</h5>
-                           <div>
-                           <ProgressCircular value={55} variant="success"/>
-
-                           </div>
-                               <div  >
-                                   <b className="inp2"> Total Energy(Kwh):</b>
-                                   <Input disabled className="disabled-cursor2 input " />                      
-                               </div>
-                               
-                               <div>
-                                   <b className="inp2"> Power Factor:</b>
-                                   <Input disabled className="disabled-cursor2 input " />
-                               </div>
-                              
-                               <div >
-                                   <b className="inp2"> Reactive Power(KVA):</b>
-                                   <Input disabled className="disabled-cursor2 input " />                      
-                               </div>
-                               
-                               <div>
-                                   <b className="inp2">Active Power:</b>
-                                   <Input disabled className="disabled-cursor2 input " />
-                               </div>
-                       </div>
-               </Card> 
-               </div> */}
+               
 
      </div>
    

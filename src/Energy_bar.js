@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const CustomBarChart2 = () => {
-  const [energyData, setEnergyData] = useState([]);
+  const [energy, setEnergy] = useState([]);
   const [lastTenEnergy, setLastTenEnergy] = useState([]);
   const [chartData, setChartData] = useState({
       options: {
@@ -61,7 +61,7 @@ const CustomBarChart2 = () => {
               const data = await response.json();
 
               // Update energy data
-              setEnergyData(prevData => [...prevData, data.energy]);
+              setEnergy(prevData => [...prevData, data.energy]);
           } catch (error) {
               console.error("Error fetching data:", error);
           }
@@ -79,9 +79,9 @@ const CustomBarChart2 = () => {
 
   useEffect(() => {
       const intervalId = setInterval(() => {
-          if (energyData.length > 0) {
+          if (energy.length > 0) {
               // Update last ten energy values
-              const lastTenEnergy = energyData.slice(-10);
+              const lastTenEnergy = energy.slice(-10);
               setLastTenEnergy(lastTenEnergy);
 
               // Update chart data
@@ -103,7 +103,7 @@ const CustomBarChart2 = () => {
       }, 2000);
 
       return () => clearInterval(intervalId);
-  }, [energyData]);
+  }, [energy]);
 
   return (
       <div className="bar-chart">

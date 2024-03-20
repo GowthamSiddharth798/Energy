@@ -7,17 +7,13 @@ import { Card } from 'react-rainbow-components';
 const Graphs = () => {
   return (
     <>
-       <Card className="cc"><div className="in-line head-main">
-                    <div className ="margin-hamber"></div>
-                        <img src="https://i.ibb.co/YZw8yxS/Iot-logo.jpg" class="main-logo" />
-                        <h1 className="main-heading">GREEN FUSION IoT SOLUTIONS</h1> 
-                    <div className="title"> <h1>Energy Monitoring </h1></div>
-                    <div >
-                        <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/>
-                            </div>
-                            <h1  class="heading">VISHNU INSTITUTE OF Technology</h1>   
-                                                              
+       <Card className="hwe" >
+        <div className=" flex" >
+                      <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
+                     <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
+                     <div > <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/></div>                                     
                     </div>
+                    
                     </Card>
     <div className='we'>
     <div className='flex marg'>

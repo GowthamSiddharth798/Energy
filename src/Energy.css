@@ -4,6 +4,37 @@
     height: 120px;
     top: -10px;
  }
+ .bvc{
+    margin-left: 70vh;
+   margin-top: 12px;
+ }
+ .ghj{
+    margin-left: 50px!important;
+ }
+ .bnm{
+    height:6vh!important;
+    width: 25vw;
+ }
+ .vit-logo {
+    height: 65px;
+    border-radius:100%;
+    margin-right: 5px;
+    margin-left: -10px!important;
+    /* margin-bottom: 60px!important; */
+   
+}
+.hwe{
+    background-color: rgba(0, 115, 255, 0.955)!important;
+}
+.heading {
+    margin-left: 150px!important;
+    font-size: 20px;
+    color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
  .arrow-line-12{
      position: absolute;
      left: 40px;
@@ -25,7 +56,7 @@
  
  
  .flex{
-     display: flex;
+     display: flex!important;
  }
  .main{
      position:absolute;
@@ -72,9 +103,8 @@
  }
  .card2{
      border-color: rgb(255, 255, 255)!important;
-     position: absolute;
-     top: 180px;
-     right: 80px;
+     margin-top: 14vh!important;
+
  }
  .card3{
      border-color: rgb(255, 255, 255)!important;
@@ -223,179 +253,3 @@
     color: rgb(26, 927, 105);
  }
  
-  /* @media (min-width:300px) and ( max-width:430px) {
-     .background{
-        background-color: rgba(0, 0, 0, 0.900)!important;        
-         height: 100vh!important;
-         width: 150vw!important;
-         
-     }
-     .arrow-line-11{
-         position: absolute;
-         left: 5px;
-         height: 56px;
-         top: 14px;
-      }
-      .arrow-line-12{
-          position: absolute;
-          left: 5px;
-          height: 56px;
-          top: 90px;
-       }
-       .arrow-line-13{
-          position: absolute;
-          left: 5px;
-          height: 56px;
-          top: 165px;
-       }
-       .arrow-line-14{
-          position: absolute;
-          left: 5px;
-          height: 56px;
-          top: 245.5px;
-       }
-      
-      
-      .flex{
-          display: flex;
-      }
-      .main{
-          position:absolute;
-          top: 40px;
-      }
-      .st-line-11{
-         rotate: 90deg; 
-         position: absolute;
-         left: -125.5px;
-         height: 35vh;
-         top: 13px;
-      }
-      .st-line-141{
-          rotate: 90deg; 
-          position: absolute;
-          left: -125.5px;
-          height: 35vh;
-          top: 71px;
-       }
-      .card{
-         margin-left: 10px;
-          height: 55vh;
-          width: 102vw;
-          margin: 15px;
-          margin-top: 25px;
-          background-color: rgb(111, 111, 111)!important;
-          border-color: rgb(255, 255, 255)!important;
-      }
-      .card2{
-          border-color: rgb(255, 255, 255)!important;
-          position: absolute;
-          top: 700px;
-          right: 103.5px;
-      }
-      .card3{
-          border-color: rgb(255, 255, 255)!important;
-          position: absolute;
-          top: 600px;
-          right: -25px;
-      }
-      .card-txt{
-        background-color: rgb(111, 111, 111)!important;
-        height: 62vh!important;
-        width: 50vw!important;
-        padding: 20px;
-      }
-      .background{
-          background-color: rgb(182, 204, 252) ;
-          height: 100vh;
-          
-      }
-      .button{
-          background-color: rgb(49, 141, 217)!important;
-          color: rgb(255, 255, 255)!important;
-          position: absolute;
-          right: -60px;
-          bottom: -23px;
-          width: 16vw!important;
-          padding-top: 10px!important;
-          height: 38px;
-      }
-      
-      .button2{
-          background-color: rgb(49, 141, 217)!important;
-          color: rgb(255, 255, 255)!important;
-          position: absolute;
-          right: 1139px;
-          bottom: -53px;
-           width: 16vw;
-           padding-top: 10px!important;
-           height: 38px;
-      }
-      .button3{
-          background-color: rgb(49, 141, 217)!important;
-          color: rgb(255, 255, 255)!important;
-          position: absolute;
-          bottom: 2190px;
-          right: 1100px;
-          width: 13vw!important;
-          padding-top: 10px!important;
-          height: 30px;
-      }
-      .button4{
-          background-color: rgb(49, 141, 217)!important;
-          color: rgb(255, 255, 255)!important;
-          position: absolute;
-          bottom: 2110px;
-          right: 1100px;
-          width: 13vw;
-          padding-top: 10px!important;
-          height: 30px;
-      }
-      .inputs{
-          position: absolute;
-          left: 115px;
-          top: -5px;
-      }
-      .inputs2{
-          position: absolute;
-          left: 115px;
-         top: 65px;
-      }
-      .inputs3{
-          position: absolute;
-          left: 115px;
-          top: 144.5px;
-        
-      }
-      .inputs4{
-          position: absolute;
-          left: 115px;
-          top: 223px;
-          font-size: 10px;
-      }
-      .disabled-cursor1{
-         width: 5vw!important;
-      }
-      .disabled-cursor1{
-         margin-right: 0px;
-         width: 20vw!important;
- 
-     }
-     .disabled-cursor2{
-        margin-left: 0PX;
-         width: 30vw!important;
-     }
-      .txt-main{
-          font-family: cursive!important;
-          margin: 15px;
-      }
-      .txt-in{
-         font-size: 5px!important;
-      }
-      .inp{
-        font-size: 8px;
-        margin-right: 25px;
-      }
-      .input{
-         font-size: x-small!important;
-      }
- } */
