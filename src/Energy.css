@@ -18,8 +18,8 @@
  .vit-logo {
     height: 65px;
     border-radius:100%;
-    margin-right: 5px;
-    margin-left: -10px!important;
+    margin-left: 0px!important;
+    margin-top: 5px;
     /* margin-bottom: 60px!important; */
    
 }
@@ -27,14 +27,20 @@
     background-color: rgba(0, 115, 255, 0.955)!important;
 }
 .heading {
-    margin-left: 150px!important;
+    margin-left: 55px!important;
     font-size: 20px;
     color: #000000;
     padding: 20px;
     border-radius: 5px;
 
 }
-
+.home-logo1{
+    height: 65px;
+    border-radius:100%;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
  .arrow-line-12{
      position: absolute;
      left: 40px;
@@ -86,7 +92,7 @@
     margin-right: 10px;
   }
  .card{
-     height: 60vh;
+     height: 65vh;
      width: 55vw;
      margin: 25px;
      margin-left: 10vh!important;
@@ -97,9 +103,9 @@
      /* padding: 30px; */
  }
  .aa{
-    margin-left: 50px!important;
-    margin-top: 30px;
-    padding: -20px;
+    margin-left: 20px!important;
+    margin-top: 35px;
+    padding: 20px;
  }
  .card2{
      border-color: rgb(255, 255, 255)!important;
@@ -115,10 +121,12 @@
  .card-txt{
    /* background-color: rgb(220, 241, 255)!important; */
    background-color: rgb(212, 236, 246)!important;
-   height: 60vh;
-   width: 30vw;
+   height: 65vh;
+   width: 35vw;
    padding-top: 30px;
-   padding-left: 55px;
+   padding-left: 25px;
+   border-color: rgb(255, 255, 255)!important;
+
  }
  .background{
      /* background-color: rgba(249, 250, 252, 0.49) ; */

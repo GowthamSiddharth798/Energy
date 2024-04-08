@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
+const handlePower = (power) => {
+    return power >= 0 ? power : power * -1;
+};
+
 const CustomBarChart = () => {
     const [powerData, setPowerData] = useState([]);
     const [lastTenPower, setLastTenPower] = useState([]);
@@ -24,7 +28,8 @@ const CustomBarChart = () => {
                 categories: [],
                 labels: {
                     show: true,
-                },title: {
+                },
+                title: {
                     text: 'Time'
                 }
             },
@@ -80,8 +85,8 @@ const CustomBarChart = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             if (powerData.length > 0) {
-                // Update last ten power values
-                const lastTen = powerData.slice(-10);
+                // Update last ten power values and ensure only positive values
+                const lastTen = powerData.slice(-10).map(handlePower);
                 setLastTenPower(lastTen);
 
                 // Update chart data
@@ -119,6 +124,3 @@ const CustomBarChart = () => {
 }
 
 export default CustomBarChart;
-
-
-

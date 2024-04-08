@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './Park.css';
 import{Card,Input,Button} from 'react-rainbow-components'
 import  { useState, useEffect } from 'react';
+import vishnu from './vishnu.jpg';
+import home from './home.png';
 
 
 export const Park = () => {
@@ -66,11 +68,15 @@ export const Park = () => {
     <>
     <div>
     <div>
-      <Card className="hwe" >
+    <Card className="hwe" >
         <div className=" flex" >
+                     <div > <Link to="/">                        
+                           <img src={home} className="home-logo1" />
+                       </Link>
+                       </div>   
                       <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
                      <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
-                     <div > <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/></div>                                     
+                     <div > <img src={vishnu} class="vit-logo "/></div>                                     
                     </div>
                     
                     </Card>
@@ -136,16 +142,16 @@ export const Park = () => {
                 <div className='b2'>
                     <div className="flex inputs">
                     <div>
-                            <b class="inp"> R_Power (W):</b>
+                            <b class="inp"> R_Power (Kw):</b>
                             <Input  className="disabled-cursor1 input " value={R_power}/>
                         </div>
 
                         <div>
-                            <b class="inp"> Y_Power (W):</b>
+                            <b class="inp"> Y_Power (Kw):</b>
                             <Input  className="disabled-cursor1 input " value={Y_power} />
                         </div>
                         <div >
-                            <b class="inp">B_Power (W):</b>
+                            <b class="inp">B_Power (Kw):</b>
                             <Input  className="disabled-cursor1 input " value={B_power} />
                         </div>
                     </div>
@@ -201,7 +207,7 @@ export const Park = () => {
 
            <Card className='vb'>
                                 <div>
-                                   <b className="inp2"> Power Factor:</b>
+                                   <b className="inp2"> Power Factor(COS φ):</b>
                                    <Input  className="disabled-cursor2 input " value={Power_factor} />
                                </div>
                                {/* <div  >
@@ -210,17 +216,17 @@ export const Park = () => {
                                </div> */}
                                <br/>
                                <div >
-                                   <b >Energy Meter Consumption(Kwh):</b>
+                                   <b className="inp2">Energy Meter Consumption(Kwh):</b>
                                    <Input  className="disabled-cursor2 input " value={Energy_Meter} />
                                </div>
                                <br/>
                                <div>
-                                            <b className="inp2">Apparent Power:</b>
+                                            <b className="inp2">Apparent Power(s):</b>
                                             <Input  className="disabled-cursor2 input "  value={Active_power}/>
                                         </div>
                                         <br/>
                                         <div >
-                                            <b className="inp2"> Reactive Power(KVA):</b>
+                                            <b className="inp2"> Reactive Power(KVAR):</b>
                                             <Input  className="disabled-cursor2 input " value={Reactive_power} />                      
                                         </div>
                                        

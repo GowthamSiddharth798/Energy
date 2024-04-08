@@ -3,11 +3,11 @@ import './Energy.css';
 import { Input,Button,Card } from "react-rainbow-components";
 import { Link } from 'react-router-dom';
 import { Progress, Space} from 'antd';
-// import Nav2 from "./Nav2";
-// import Menu from "./Menu";
+import vishnu from './vishnu.jpg';
 import  { useState, useEffect } from 'react';
-// import { Variant } from "react-bootstrap";
-
+import arrow from './arrow.png';
+import stline from './stline.png';
+import home from './home.png';
 const formatProgress = (percent) => '${percent}';
 const getColorEffi = (percent) => {
   if (percent >= 75) {
@@ -43,7 +43,6 @@ const getColorEffi = (percent) => {
                     setPower_factor(data.Power_factor);
                     setEnergy(data.energy);
                     setVoltage(data.Voltage);
-
                     console.log(data);
                 })
                 .catch(error => {
@@ -76,7 +75,7 @@ const getColorEffi = (percent) => {
 
   const getButtonStyle = () => {
     return {
-      backgroundColor:  current > 630 || power>270000 || energy>5000 ? 'red' : 'rgb(0,152,28)', 
+      backgroundColor:  current > 630 || power>270000 || energy>7000 ? 'red' : 'rgb(0,152,28)', 
       color: 'green',
       height:40,
       width:100,
@@ -84,8 +83,10 @@ const getColorEffi = (percent) => {
       borderradius:10,
     };
   };
-
-
+// to handel the power value...........
+  const handlePower = (power) => {
+    return power >= 0 ? power : power * -1;
+  };
 
   
 
@@ -97,9 +98,13 @@ const getColorEffi = (percent) => {
       <div>
       <Card className="hwe" >
         <div className=" flex" >
+                     <div > <Link to="/">                        
+                           <img src={home} className="home-logo1" />
+                       </Link>
+                       </div>   
                       <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
                      <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
-                     <div > <img src="https://i.ibb.co/Cm04CR4/vishnu-logo.jpg" class="vit-logo "/></div>                                     
+                     <div > <img src={vishnu} class="vit-logo "/></div>                                     
                     </div>
                     
                     </Card>
@@ -111,8 +116,8 @@ const getColorEffi = (percent) => {
                        <div class="main">
                            {/* pcc1 */}
                        <div class="flex">
-                       <img src="https://art.pixilart.com/e4c4e29906724a1.png" className="st-line-11"></img>
-                       <img src="https://www.downloadclipart.net/large/12584-right-black-arrow-design.png" className="arrow-line-11" ></img>
+                       <img src={stline} className="st-line-11"></img>
+                       <img src={arrow} className="arrow-line-11" ></img>
                       
                        
                        <Link to="/Pcc1">
@@ -129,8 +134,8 @@ const getColorEffi = (percent) => {
                            </div>
                            
                            <div>
-                               <b class="inp"> Power(W):</b>
-                               <Input  className="disabled-cursor1 input " value={power} onChange={handleInput2Change} />
+                               <b class="inp"> Power(Kw):</b>
+                               <Input  className="disabled-cursor1 input " value={handlePower(power)} onChange={handleInput2Change} />
                            </div>
                            {/* <div >
                                 <b> Energy Meter(W):</b>                  
@@ -144,8 +149,8 @@ const getColorEffi = (percent) => {
                        </div>
                        {/* pcc2  */}
                        <div className="flex">
-                        <img src="https://art.pixilart.com/e4c4e29906724a1.png" className="st-line-12"></img>
-                        <img src="https://www.downloadclipart.net/large/12584-right-black-arrow-design.png" className="arrow-line-12" ></img>
+                        <img src={stline} className="st-line-12"></img>
+                        <img src={arrow} className="arrow-line-12" ></img>
                         <Link to="/Pcc2">
                         <Button className="button2 txt-in" type="link" id="actionButton"  style={getButtonStyle() } ><h6 className="txt-in">PCC-2</h6> </Button> </Link>
 
@@ -156,8 +161,8 @@ const getColorEffi = (percent) => {
                            </div>
                            
                            <div>
-                               <b class="inp"> Power(W):</b>
-                               <Input  className="disabled-cursor1 input " value={power} onChange={handleInput2Change}/>
+                               <b class="inp"> Power(Kw):</b>
+                               <Input  className="disabled-cursor1 input " value={handlePower(power)} onChange={handleInput2Change}/>
                            </div>
                            {/* <div >
                                 <b> Energy Meter(W):</b>                  
@@ -171,8 +176,8 @@ const getColorEffi = (percent) => {
                        </div>
                        {/* pcc3 */}
                        <div className="flex">
-                       <img src="https://art.pixilart.com/e4c4e29906724a1.png" className="st-line-13"></img>
-                       <img src="https://www.downloadclipart.net/large/12584-right-black-arrow-design.png" className="arrow-line-13" ></img>
+                       <img src={stline} className="st-line-13"></img>
+                       <img src={arrow} className="arrow-line-13" ></img>
                        <Link to="/Pcc3">
                        <Button className="button3 txt-in " type="link" id="actionButton"  style={getButtonStyle()} > <h6 className="txt-in">PCC-3</h6> </Button> </Link>
                        <div className="flex inputs3" >
@@ -182,8 +187,8 @@ const getColorEffi = (percent) => {
                            </div>
                            
                            <div>
-                               <b class="inp"> Power(W):</b>
-                               <Input  className="disabled-cursor1 input " value={power} onChange={handleInput2Change} />
+                               <b class="inp"> Power(Kw):</b>
+                               <Input  className="disabled-cursor1 input "value={handlePower(power)} onChange={handleInput2Change} />
                            </div>
                            {/* <div >
                                 <b> Energy Meter(W):</b>                  
@@ -197,8 +202,8 @@ const getColorEffi = (percent) => {
                        </div>
                        {/* pcc4 */}
                        <div className="flex">
-                       <img src="https://art.pixilart.com/e4c4e29906724a1.png" className="st-line-141"></img>
-                       <img src="https://www.downloadclipart.net/large/12584-right-black-arrow-design.png" className="arrow-line-14" ></img>
+                       <img src={stline} className="st-line-141"></img>
+                       <img src={arrow} className="arrow-line-14" ></img>
                        <Link to="/Pcc4">
                        <Button className="button4" type="link" id="actionButton"  style={getButtonStyle()} ><h6 className="txt-in" >PCC-4</h6></Button></Link>
                        <div className="flex inputs4">
@@ -208,8 +213,8 @@ const getColorEffi = (percent) => {
                            </div>
                            
                            <div>
-                               <b class="inp"> Power(W):</b>
-                               <Input  className="disabled-cursor1 input " value={power} onChange={handleInput2Change} />
+                               <b class="inp"> Power(Kw):</b>
+                               <Input  className="disabled-cursor1 input " value={handlePower(power)} onChange={handleInput2Change} />
                            </div>
                            {/* <div >
                                 <b> Energy Meter(W):</b>                  
@@ -231,20 +236,26 @@ const getColorEffi = (percent) => {
                        <div className="flex-Card2">
                               <div>
                               <div>
-                                <Space Wrap>                                  <Progress  type="circle" strokeColor={getColorEffi(power)} percent={power} />
-</Space>
+                                <b className="inp2">Power(Kw) :  </b>
+                                <Space Wrap>   
+
+                                  <Progress  type="circle" strokeColor={getColorEffi(power)} percent={handlePower(power)} />
+                                </Space>
                                   {/* <ProgressCircular value={power} className="back234" /> */}
-                              </div>
+                              </div>                                        <br/>
+
                                <div  >
                                    <b className="inp2"> Voltage(v):</b>
                                    <Input  className="disabled-cursor2 input "  value={Voltage} />                      
-                               </div>
+                               </div>                                        <br/>
+
                                <div >
-                                   <b >Energy <br/>Consumption(Kwh):</b>
+                                   <b >Energy_Consumption(Kwh):</b>
                                    <Input  className="disabled-cursor2 input " value={Energy_Meter}/>
-                               </div>
+                               </div>                                         <br/>
+
                                <div>
-                                   <b className="inp2"> Power Factor:</b>
+                                   <b className="inp2"> Power Factor (COS φ):</b>
                                    <Input  className="disabled-cursor2 input " value={Power_factor*-1} />
                                </div>
                               </div>
@@ -252,19 +263,22 @@ const getColorEffi = (percent) => {
                                <div className="aa">
 
                                         <div>
-                                            <b className="inp2">Apparent Power:</b>
+                                            <b className="inp2">Apparent Power(s):</b>
                                             <Input  className="disabled-cursor2 input " value={Active_power} />
                                         </div>
+                                        <br/>
                                         <div >
-                                            <b className="inp2"> Reactive Power(KVA):</b>
+                                            <b className="inp2"> Reactive_Power(KVAR):</b>
                                             <Input  className="disabled-cursor2 input " value={Reactive_power} />                      
                                         </div>
+                                        <br/>
                                         <div >
-                                            <b >Energy Meter<br/> Reading(Kwh):</b>
+                                            <b >EnergyMeter(Kwh):</b>
                                             <Input  className="disabled-cursor2 input " value={energy} />
-                                        </div>
+                                        </div> 
+                                        <br/>
                                         <div >
-                                            <b >Monthly Energy <br/> Consumption(Kwh):</b>
+                                            <b >Monthly Energy(Kwh):</b>
                                             <Input  className="disabled-cursor2 input " value={Energy_Meter} />
                                         </div>
                                </div>
