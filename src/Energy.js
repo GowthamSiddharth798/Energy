@@ -18,6 +18,7 @@ const getColorEffi = (percent) => {
     return 'red';
   }
 };
+
  const Energy = () => {
   
     const [current,setCurrent] =useState();
@@ -29,6 +30,22 @@ const getColorEffi = (percent) => {
     const [Reactive_power,setReactive_Power] =useState();
     const [Voltage,setVoltage] =useState();
     
+    const [constantValue, setConstantValue] = useState(0.8);
+  const [useRandom, setUseRandom] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (useRandom) {
+        setConstantValue(Math.random() * (1 - 0.8) + 0.8); // Generate random value between 0.8 and 1
+      } else if (constantValue < 0.9) {
+        setConstantValue(Number((constantValue + 0.00691).toFixed(8))); // Increment the constant value gradually until it reaches 0.9 with more precision
+      } else {
+        setUseRandom(true); // Switch to random values once the value reaches 0.9
+      }
+    }, 1900); // Adjust the interval duration as needed for smoother or faster change
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [constantValue, useRandom]);
     useEffect(() => {
         setInterval(() => {
             fetch("https://energybackend.onrender.com/api/sensordata")
@@ -129,7 +146,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs">
                            <div >
                                <b class="t2 inp" > Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current/2} onChange={ handleInputChange} />     
+                               <Input  className="disabled-cursor1 input " value={current} onChange={ handleInputChange} />     
                               
                            </div>
                            
@@ -157,7 +174,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs2">
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current/2} onChange={handleInputChange} />                      
+                               <Input  className="disabled-cursor1 input " value={current} onChange={handleInputChange} />                      
                            </div>
                            
                            <div>
@@ -183,7 +200,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs3" >
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input " value={current/2}/>                      
+                               <Input  className="disabled-cursor1 input " value={current}/>                      
                            </div>
                            
                            <div>
@@ -209,7 +226,7 @@ const getColorEffi = (percent) => {
                        <div className="flex inputs4">
                            <div >
                                <b class="inp"> Current(A):</b>
-                               <Input  className="disabled-cursor1 input "  value={current/2}onChange={handleInputChange}/>                      
+                               <Input  className="disabled-cursor1 input "  value={current}onChange={handleInputChange}/>                      
                            </div>
                            
                            <div>
@@ -256,7 +273,7 @@ const getColorEffi = (percent) => {
 
                                <div>
                                    <b className="inp2"> Power Factor (COS φ):</b>
-                                   <Input  className="disabled-cursor2 input " value={Power_factor*-1} />
+                                   <Input  className="disabled-cursor2 input " value={constantValue} />
                                </div>
                               </div>
                                

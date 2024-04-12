@@ -71,7 +71,7 @@ const CustomBarChart2 = () => {
       fetchData();
 
       // Fetch data every 2 seconds (example)
-      const intervalId = setInterval(fetchData, 3000);
+      const intervalId = setInterval(fetchData, 2000);
 
       // Clean up interval on component unmount
       return () => clearInterval(intervalId);

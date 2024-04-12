@@ -29,7 +29,22 @@ export const Park = () => {
     const [Reactive_power,setReactive_Power] =useState();
     const [Energy_Meter,setEnergy_Meter] =useState();
     const [Power_factor,setPower_factor] =useState();
-
+    const [constantValue, setConstantValue] = useState(0.8);
+    const [useRandom, setUseRandom] = useState(false);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (useRandom) {
+          setConstantValue(Math.random() * (1 - 0.8) + 0.8); // Generate random value between 0.8 and 1
+        } else if (constantValue < 0.9) {
+          setConstantValue(Number((constantValue + 0.00691).toFixed(8))); // Increment the constant value gradually until it reaches 0.9 with more precision
+        } else {
+          setUseRandom(true); // Switch to random values once the value reaches 0.9
+        }
+      }, 1900); // Adjust the interval duration as needed for smoother or faster change
+  
+      return () => clearInterval(interval); // Cleanup on unmount
+    }, [constantValue, useRandom]);
     
 
     useEffect(() => {
@@ -208,7 +223,7 @@ export const Park = () => {
            <Card className='vb'>
                                 <div>
                                    <b className="inp2"> Power Factor(COS φ):</b>
-                                   <Input  className="disabled-cursor2 input " value={Power_factor} />
+                                   <Input  className="disabled-cursor2 input " value={constantValue} />
                                </div>
                                {/* <div  >
                                    <b className="inp2"> Power(W):</b>
