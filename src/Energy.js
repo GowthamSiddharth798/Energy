@@ -119,7 +119,7 @@ const getColorEffi = (percent) => {
                            <img src={home} className="home-logo1" />
                        </Link>
                        </div>   
-                      <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
+                      <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING SYSTEM</b></Card></h3>
                      <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
                      <div > <img src={vishnu} class="vit-logo "/></div>                                     
                     </div>
@@ -296,7 +296,7 @@ const getColorEffi = (percent) => {
                                         <br/>
                                         <div >
                                             <b >Monthly Energy(Kwh):</b>
-                                            <Input  className="disabled-cursor2 input " value={Energy_Meter} />
+                                            <Input  className="disabled-cursor2 input " value={200.12*energy+Energy_Meter} />
                                         </div>
                                </div>
                               

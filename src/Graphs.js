@@ -16,7 +16,7 @@ const Graphs = () => {
                        <Link to="/">                        
                            <img src={home} className="home-logo1" />
                        </Link>
-                      <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING</b></Card></h3>
+                       <h3 className="bvc"><Card className="bnm"><b className="ghj"> ENERGY MONITORING SYSTEM</b></Card></h3>
                      <h3  class="heading">VISHNU INSTITUTE OF TECHNOLOGY</h3>   
                      <div > <img src={vishnu} class="vit-logo "/></div>                                     
                     </div>
