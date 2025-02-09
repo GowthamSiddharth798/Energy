@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomBarChart from './LiveGraphs';
 import CustomBarChart2 from './Energy_bar';
-import CustomBarChart3 from './Energy_Monthly';
+// import CustomBarChart3 from './Energy_Monthly';
 import './LiveGraphs.css';
 import { Card } from 'react-rainbow-components';
 import vishnu from './vishnu.jpg';
